@@ -16,8 +16,8 @@ metadata:
 {{- end }}
   name: {{ template "mongodb-replicaset.fullname" . }}-client
 spec:
-  type: NodePort  
-  NodePort: None
+  type: clusterIP  
+  clusterIP: None
   ports:
     - name: mongodb
       port: {{ .Values.port }}
